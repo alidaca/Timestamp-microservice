@@ -1,0 +1,17 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "A timestamp microservice built in node, express and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alidaca",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "moment": "^2.11.2"
+  }
+}
