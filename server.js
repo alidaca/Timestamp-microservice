@@ -1,10 +1,18 @@
-var express = require('express');
+var express = require('express'),
+    moment = require('moment');
+    
 
 var app = express();
+
+var port = process.env.PORT || 3000;
+
 app.use(express.static(process.cwd() + '/public'));
 
-app.listen(8000, function(){
-  console.log('Listening on port 8000...');
+stampRouter = require('./app/timestamp');
+app.use('/', stampRouter);
+
+app.listen(port, function(){
+  console.log('Listening on port '+ port +'...');
 });
 
 

@@ -1,27 +1,4 @@
-var express = require('express'),
-    moment = require('moment');
-    //bodyParser = ('body-parser')
-    
-
-var app = express();
-
-var port = process.env.PORT || 3000;
-
-app.use(express.static(process.cwd() + '/../public'));
-
-app.listen(port, function(){
-  console.log('Listening on port '+ port +'...');
-});
-
-
-// app.get('/:timestamp', function(req,res){
-//   res.send('received request for timestamp '+ req.params.timestamp);
-// });
-
-
-//use body-parser to get data form POST
-//app.use(bodyParser.urlencoded({extended: true}));
-//app.use(bodyParser.json());
+var express = require('express');
 
 var stampRouter = express.Router();
 
@@ -59,4 +36,4 @@ stampRouter.route('/:timestamp')
 
   });
 
-  app.use('/', stampRouter);
+module.exports = stampRouter;
