@@ -1,4 +1,5 @@
-var express = require('express');
+var express = require('express'),
+    moment = require('moment');
 
 var stampRouter = express.Router();
 
